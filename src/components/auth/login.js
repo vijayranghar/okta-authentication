@@ -13,7 +13,7 @@ export default withAuth(
       this.checkAuthentication();
     }
 
-    async checkAuthentication() {
+    checkAuthentication = async () => {
       const authenticated = await this.props.auth.isAuthenticated();
       if (authenticated !== this.state.authenticated) {
         this.setState({ authenticated });

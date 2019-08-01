@@ -8,8 +8,8 @@ import Staff from './components/pages/staff'
 import Login from './components/auth/login'
 import './App.css';
 
-function onAuthRequired ({history}) {
-  history.push('/login ')
+function onAuthRequired ({ history }) {
+  history.push('/login')
 }
 class App extends Component {
   render() {
@@ -31,7 +31,7 @@ class App extends Component {
             <div className="container">
               <Route path="/" exact component={Home} />
               <SecureRoute path="/staff" exact component={Staff} />
-              <Route 
+              <Route
                 path='/login' 
                 render={() => <Login baseUrl="https://dev-210902.okta.com"/>}
               />
